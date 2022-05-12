@@ -24,7 +24,7 @@ public class Student {
     private String email;
     @Transient
     private int age;
-    private LocalDate Dirth_of_birth;
+    private LocalDate DOB;
 
     public Student() {
     }
@@ -33,13 +33,13 @@ public class Student {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.Dirth_of_birth = Date_of_birth;
+        this.DOB = Date_of_birth;
     }
 
     public Student(String name, String email, LocalDate DOB) {
         this.name = name;
         this.email = email;
-        this.Dirth_of_birth = DOB;
+        this.DOB = DOB;
     }
 
     public Long getId() {
@@ -67,19 +67,19 @@ public class Student {
     }
 
     public int getAge() {
-        return Period.between(this.Dirth_of_birth, LocalDate.now()).getYears();
+        return Period.between(this.DOB, LocalDate.now()).getYears();
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public LocalDate getDirth_of_birth() {
-        return Dirth_of_birth;
+    public LocalDate getDOB() {
+        return DOB;
     }
 
-    public void setDirth_of_birth(LocalDate dirth_of_birth) {
-        this.Dirth_of_birth = dirth_of_birth;
+    public void setDOB(LocalDate DOB) {
+        this.DOB = DOB;
     }
 
     @Override
@@ -89,7 +89,7 @@ public class Student {
                 ", name = '" + name + '\'' +
                 ", email = '" + email + '\'' +
                 ", age = " + age +
-                ", Dirth_of_birth = " + Dirth_of_birth +
+                ", Date of birth = " + DOB +
                 '}';
     }
 }
